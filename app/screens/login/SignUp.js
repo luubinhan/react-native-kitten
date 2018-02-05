@@ -11,9 +11,10 @@ import {
   RkText,
   RkTextInput,
   RkStyleSheet,
-  RkTheme
+  RkTheme,
+  RkAvoidKeyboard
 } from 'react-native-ui-kitten';
-import {GradientButton} from '../../components/'
+//import {GradientButton} from '../../components/'
 
 export class SignUp extends React.Component {
   static navigationOptions = {
@@ -21,7 +22,7 @@ export class SignUp extends React.Component {
   }
   render() {
     return (
-      <KeyboardAvoidingView style={styles.screen}>
+      <KeyboardAvoidingView behavior='padding'>
         <View>
           <Text>Registration</Text>
         </View>
@@ -30,7 +31,7 @@ export class SignUp extends React.Component {
             <RkTextInput rkType='rounded' placeholder='Name' />
             <RkTextInput rkType='rounded' placeholder='Email' />
             <RkTextInput rkType='rounded' placeholder='Password' secureTextEntry={true} />
-            <GradientButton style={styles.save} 
+            <RkButton style={styles.save} 
               rkType='large'
               text='SIGN UP'
               onPress={() => {
