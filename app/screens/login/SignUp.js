@@ -24,13 +24,13 @@ export class SignUp extends React.Component {
     return (
       <KeyboardAvoidingView behavior='padding'>
         <View>
-          <Text>Registration</Text>
+          <RkText rkType='h1'>Registration</RkText>
         </View>
         <View style={styles.content}>
           <View>
-            <RkTextInput rkType='rounded' placeholder='Name' />
-            <RkTextInput rkType='rounded' placeholder='Email' />
-            <RkTextInput rkType='rounded' placeholder='Password' secureTextEntry={true} />
+            <RkTextInput rkType='form' placeholder='Name' />
+            <RkTextInput rkType='form' placeholder='Email' />
+            <RkTextInput rkType='form' placeholder='Password' secureTextEntry={true} />
             <RkButton style={styles.save} 
               rkType='large'
               text='SIGN UP'
