@@ -7,3 +7,13 @@ export const MainRoutes = [
     title: 'Login Menu',
   }
 ]
+
+let menuRoutes = _.cloneDeep(MainRoutes);
+menuRoutes.unshift({
+  id: 'GridV2',
+  title: 'Start',
+  screen: Screens.GridV2,
+  childrens: []
+})
+
+export const MenuRoutes = menuRoutes;
