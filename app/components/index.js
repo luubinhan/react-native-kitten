@@ -1,2 +1,2 @@
-export * from './GradientButton'
+export * from './gradientButton'
 export * from './navBar'

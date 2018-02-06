@@ -1,12 +1,12 @@
 import React from 'react';
 import _ from 'lodash';
-import {StackNavigator} from 'react-navigation';
-import {withRkTheme} from 'react-native-ui-kitten';
+import {StackNavigator} from 'react-navigation'
+import {withRkTheme} from 'react-native-ui-kitten'
+import {NavBar} from '../../components/index';
 import transition from './transitions';
-import {NavBar} from '../../components/index'
-
 import {
-  MainRoutes
+  MainRoutes,
+  MenuRoutes
 } from './routes';
 
 let main = {};

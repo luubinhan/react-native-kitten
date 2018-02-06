@@ -5,9 +5,9 @@ import {
 import {RkTheme} from 'react-native-ui-kitten';
 import {KittenTheme} from './theme';
 import {AvatarTypes} from '../components/avatar/types';
-import {GradientButtonTypes} from '../components/gradientButton/types';
+import {GradientButtonTypes} from '../components/gradientButton/types'
 import {SwitchTypes} from '../components/switch/types';
-import {SocialBarTypes} from '../components/socialBar/types';
+//TODO: import {SocialBarTypes} from '../components/socialBar/types';
 import {scale, scaleModerate, scaleVertical} from '../utils/scale';
 
 export let bootstrap = () => {

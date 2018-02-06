@@ -110,13 +110,13 @@ export class NavBar extends React.Component {
 let styles = RkStyleSheet.create(theme => ({
   layout: {
     backgroundColor: theme.colors.screen.base,
-    paddingTop: UIConstants.StatusbarHeight,
+    //TODO: paddingTop: UIConstants.StatusbarHeight,
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderBottomColor: theme.colors.border.base
   },
   container: {
     flexDirection: 'row',
-    height: UIConstants.AppbarHeight,
+    //TODO: height: UIConstants.AppbarHeight,
 
   },
   left: {
