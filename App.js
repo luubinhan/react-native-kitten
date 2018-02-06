@@ -18,6 +18,17 @@ bootstrap();
 
 import {SignUp} from './app/screens/login'
 
+function getCurrentRouteName(navigationState) {
+  if (!navigationState) {
+    return null;
+  }
+  const route = navigationState.routes[navigationState.index];
+  if (route.routes) {
+    return getCurrentRouteName(route);
+  }
+  return route.routeName;
+}
+
 export default class App extends React.Component {
   render() {
     return (
