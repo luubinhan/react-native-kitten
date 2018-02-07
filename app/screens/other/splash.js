@@ -9,13 +9,13 @@ import {
 import {
   RkText,
   RkTheme
-} from 'react-native-ui-kittten';
+} from 'react-native-ui-kitten';
 import {NavigationActions} from 'react-navigation';
 import {ProgressBar} from '../../components';
 import {
   KittenTheme
 } from '../../config/theme';
-import {scaleVertical, scale, scaleVertical} from '../../utils/scale';
+import {scaleVertical, scale, scaleModerate} from '../../utils/scale';
 
 let timeFrame = 500;
 
@@ -43,7 +43,7 @@ export class SplashScreen extends React.Component {
           this.props.navigation.dispatch(toHome);
         }, timeFrame);
       } else {
-        let reandom = Math.random() * 0.5;
+        let random = Math.random() * 0.5;
         let progress = this.state.progress + random;
         if (progress > 1) {
           progress = 1;

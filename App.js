@@ -19,6 +19,7 @@ data.populateData();
 import {SignUp} from './app/screens/login'
 import {Screen1} from './app/screens/index'
 
+
 function getCurrentRouteName(navigationState) {
   if (!navigationState) {
     return null;
@@ -33,8 +34,11 @@ function getCurrentRouteName(navigationState) {
 //let SideMenu = withRkTheme(Screens.SideMenu);
 const MainApp = StackNavigator({
   First: {
-    screen: Screen1
+    screen: Screens.SplashScreen
   },
+  Home: {
+    screen: Screen1
+  }
  
 }, {
   headerMode: 'none'

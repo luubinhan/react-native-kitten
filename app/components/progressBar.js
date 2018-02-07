@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   StyleSheet,
-  Viewa,
+  View,
   Animated,
   Easing
 } from 'react-native';
