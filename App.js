@@ -11,10 +11,10 @@ import {AppLoading, Font} from 'expo';
 import * as Screens from './app/screens'
 import {bootstrap} from './app/config/bootstrap';
 // TODO: import track from './app/config/analytics';
-//TODO: import {data} from './app/data'
+import {data} from './app/data'
 
 bootstrap();
-//TODO data.populateData();
+data.populateData();
 
 import {SignUp} from './app/screens/login'
 import {Screen1} from './app/screens/index'
