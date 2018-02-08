@@ -489,7 +489,7 @@ export let bootstrap = () => {
   RkTheme.registerComponent('Avatar', AvatarTypes);
   RkTheme.registerComponent('GradientButton', GradientButtonTypes);
   RkTheme.registerComponent('RkSwitch', SwitchTypes);
-  //TODO: RkTheme.registerComponent('SocialBar', SocialBarTypes);
+  RkTheme.registerComponent('SocialBar', SocialBarTypes);
 
   StatusBar.setBarStyle('dark-content', true);
 };
