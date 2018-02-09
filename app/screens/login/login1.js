@@ -7,6 +7,7 @@ import {
   Text,
   KeyboardAvoidingView
 } from 'react-native';
+import {Grid, Row} from 'react-native-easy-grid'
 import {
   RkButton,
   RkText,
@@ -39,15 +40,18 @@ export class LoginV1 extends React.Component {
   render() {
     let image = this._renderImage();
     return (
-      <KeyboardAvoidingView behavior='padding'>
-        <View>
-          <RkText rkType='h1'>Registration</RkText>
-        </View>
-        <View style={styles.container}>
-        
-          <Text>Hello</Text>
-        </View>
-      </KeyboardAvoidingView>
+      <Grid>
+        <Row>
+          <View>
+            <RkText rkType='h1'>Registration</RkText>
+          </View>
+        </Row>
+        <Row>
+          <View style={styles.container}>
+            <Text>Hello</Text>
+          </View>
+        </Row>
+      </Grid>
     )
   }
 }
@@ -56,7 +60,6 @@ let styles = RkStyleSheet.create(theme => ({
   container: {
     flex: 1,
     justifyContent: 'center',
-    height: 100,
     alignItems: 'center'
   },
   screen: {
