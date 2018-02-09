@@ -37,7 +37,7 @@ const MainApp = StackNavigator({
     screen: Screens.SplashScreen
   },
   Home: {
-    screen: Screen1
+    screen: Screens.LoginV1
   }
  
 }, {
@@ -71,16 +71,8 @@ export default class App extends React.Component {
     }
     return (
       <View style={styles.container}>
-        <MainApp
-          onNavigationStateChange={(prevState, currentState) => {
-            const currentScreen = getCurrentRouteName(currentState);
-            const prevScreen = getCurrentRouteName(prevState);
-
-            if (prevScreen !== currentScreen) {
-              track(currentScreen);
-            }
-          }}
-        />
+        
+        <Screens.LoginV1 />        
       </View>
     );
   }

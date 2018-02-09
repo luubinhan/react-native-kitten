@@ -4,6 +4,7 @@ import {
   Image,
   Dimensions,
   Keyboard,
+  Text,
   KeyboardAvoidingView
 } from 'react-native';
 import {
@@ -14,7 +15,7 @@ import {
   RkTheme,
 } from 'react-native-ui-kitten';
 import {FontAwesome} from '../../assets/icons';
-import {GradientButton} from '../../components/GradientButton'
+import {GradientButton} from '../../components/gradientButton'
 import {scale, scaleVertical, scaleModerate} from '../../utils/scale'
 
 export class LoginV1 extends React.Component {
@@ -39,33 +40,12 @@ export class LoginV1 extends React.Component {
     let image = this._renderImage();
     return (
       <KeyboardAvoidingView behavior='padding'>
-        {image}
+        <View>
+          <RkText rkType='h1'>Registration</RkText>
+        </View>
         <View style={styles.container}>
-          <View style={styles.buttons}>
-            <RkButton style={styles.button} rkType='social'>
-              <RkText rkType='awesome hero accentColor'>{FontAwesome.twitter}</RkText>
-            </RkButton>
-            <RkButton style={styles.button} rkType='social'>
-              <RkText rkType='awesome hero accentColor'>{FontAwesome.google}</RkText>
-            </RkButton>
-            <RkButton style={styles.button} rkType='social'>
-              <RkText rkType='awesome hero accentColor'>{FontAwesome.facebook}</RkText>
-            </RkButton>
-          </View>
-          <RkTextInput rkType='rounded' placeholder='Username'/>
-          <RkTextInput rkType='rounded' placeholder='Password' secureTextEntry={true}/>
-          <GradientButton onPress={() => {
-            this.props.navigation.goBack()
-          }} rkType='large' style={styles.save} text='LOGIN'/>
-          <View style={styles.footer}>
-            <View style={styles.textRow}>
-              <RkText rkType='primary3'>Don’t have an account?</RkText>
-              <RkButton rkType='clear'>
-                <RkText rkType='header6' onPress={() => this.props.navigation.navigate('SignUp')}> Sign up
-                  now </RkText>
-              </RkButton>
-            </View>
-          </View>
+        
+          <Text>Hello</Text>
         </View>
       </KeyboardAvoidingView>
     )
@@ -73,37 +53,26 @@ export class LoginV1 extends React.Component {
 }
 
 let styles = RkStyleSheet.create(theme => ({
-  screen: {
+  container: {
     flex: 1,
-    alignItems: 'center',
-    backgroundColor: theme.colors.screen.base
+    justifyContent: 'center',
+    height: 100,
+    alignItems: 'center'
+  },
+  screen: {
   },
   image: {
-    resizeMode: 'cover',
-    marginBottom: scaleVertical(10),
-  },
-  container: {
-    paddingHorizontal: 17,
-    paddingBottom: scaleVertical(22),
-    alignItems: 'center',
-    flex: -1
+    
   },
   footer: {
-    justifyContent: 'flex-end',
-    flex: 1
+   
   },
   buttons: {
-    flexDirection: 'row',
-    marginBottom: scaleVertical(24)
   },
   button: {
-    marginHorizontal: 14
   },
   save: {
-    marginVertical: 9
   },
   textRow: {
-    justifyContent: 'center',
-    flexDirection: 'row',
   }
 }));
